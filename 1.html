@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//     3.输入一个年龄(要求在18-60之间),如果年龄不符合规则，要重新输入，直到输入正确为止（提示：未知循环次数）       
+        // var age = +prompt("请输入一个年龄");
+        // while (!(age > 18 && age <60)) {
+        //     age = prompt("请输入一个年龄");
+        // }
+        // alert("程序结束");
+
+// [可选]4.输入年和月,输出月份的最大天数(月份在1-12之间,输入错误要重输)
+        do {
+            var year = prompt("请输入一个年份");
+            var month = prompt("请输入一个月份");
+            if (year % 4 == 0 && year % 100 != 0 && month == "2") {
+                alert("29天");
+            } else {
+                switch(month){
+                    case "1":
+                    case "3":
+                    case "5":
+                    case "7":
+                    case "8":
+                    case "10":
+                    case "12": alert("31天");
+                    break;
+                    case "4":
+                    case "6":
+                    case "9":
+                    case "11": alert("30天");
+                    break;
+                    case "2": alert("28天");
+                    break;
+                    default: alert("您输入有误");var flag=true;
+                }               
+            }           
+        }while(flag);
+
+        
+// 5.输出1-1000内能同时被7和11整除的数
+        
+        // for (var i = 1; i <= 1000; i++) {
+        //     if(i % 7 == 0 && i % 11 == 0){
+        //         console.log(i);
+        //     }
+        //     i++;
+        // }
+        
+// [可选]6.打印所有的回文数。所谓回文数，是指一个5位数，并且它的万位和个位相等，千位和十位相等，如12321,12321就是回文数。
+// 得到万位的数字：数字/10000
+// 得到千位的数字：数字/1000%10
+// 得到百位的数字：数字/100%10
+// 得到十位的数字：数字/10%10
+// 得到个位的数字：数字%10
+        // for (var i=10000; i <= 99999; i++) {
+        //     var wan = Math.floor(i / 10000);
+        //     var qian = Math.floor(i / 1000 % 10);
+        //     var bai = Math.floor(i / 100 % 10);
+        //     var shi = Math.floor(i / 10 % 10);
+        //     var ge = i % 10;
+        //     if (wan == ge && qian == shi) {
+        //         console.log(i);
+        //     }
+        //     i++;
+        // }
+    </script>
+</body>
+</html>
