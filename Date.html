@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date = new Date();
+        console.log(+date);
+        var date = new Date();
+        console.log(+date);
+        
+        //时间戳：从1970年1月1日00:00:00（标准时）开始
+        var date1 = new Date(1498274584342);
+        console.log(date1);  //Sat Jun 24 2017 11:23:04 GMT+0800 (中国标准时间)
+        //调用date1对象的toString()方法。
+        //toString()方法就是把对象转换成为字符串调用的方法
+        console.log(date1.toString()); //Sat Jun 24 2017 11:23:04 GMT+0800 (中国标准时间)
+        console.log(date1.toDateString());  //Sat Jun 24 2017
+        console.log(date1.toTimeString());  //11:23:04 GMT+0800 (中国标准时间)
+        console.log(date1.toLocaleDateString()); // 2017/6/24
+        console.log(date1.toLocaleString("zh-CN"));  //2017/6/24 上午11:23:04
+        console.log(date1.toLocaleString("en-US")); //6/24/2017, 11:23:04 AM
+        console.log(date1.toLocaleTimeString());  //上午11:23:04 
+
+
+        // 时间
+        var start = +new Date();
+        var date = new Date();
+        console.log(date);
+        var year = date.getYear();  //117 把当前年份与1900做减法计算
+        var year = date.getFullYear();
+        console.log(date.getFullYear());  //2017
+        //UTC 标准时间
+        console.log(date.getUTCFullYear());  //2017
+        var month = date.getMonth() + 1;
+        if (month < 10){
+            month = "0" + month;
+        }
+        var riqi = date.getDate();
+        if (riqi < 10){
+            riqi = "0" + riqi;
+        }
+        var day = date.getDay();
+        if (day == 0){
+            day = "日";
+        }
+        var hour = date.getHours();
+        //  console.log(hour);
+        //  console.log(date.getUTCHours());  //3
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        console.log("现在是"+ year+"年"+month+"月"+riqi+"日,星期"+day+", "+hour + "点"+minutes+"分"+seconds+"秒");
+        var end = +new Date();
+        console.log("代码执行的时间是"+(end - start)+"毫秒");
+        
+    </script>
+</body>
+</html>

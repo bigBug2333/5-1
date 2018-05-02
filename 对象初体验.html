@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1.使用Object创建对象 
+        // 创建对象
+        // var student = new Object ();
+        // var student1 = {};
+        // student1.name = "李四";
+        // student.name = "张三";
+        // // 添加行为s
+        // student.study = function () {
+        //     console.log("打开电脑");
+        //     console.log("打开公屏");
+        //     console.log("打开Webstorm");
+        // }
+        // student1.study = function () {
+        //     console.log("打开");
+        //     console.log("打开");
+        //     console.log("打开");
+        // }
+        // // 调用
+        // console.log(student.name);
+        // console.log(student1.name);        
+        // student.study();
+        // student1.study();
+
+
+    // 2.使用字面量创建对象
+        // var student = {
+        //     name : "小品",
+        //     age : 18,
+        //     lead : function () {
+        //         console.log(this.name + "正在领读");   
+        //     },
+        //     study : function () {
+        //         console.log(this.name + "正在学习"); 
+        //     }
+        // }
+        // console.log(student.name);
+        // student.lead();
+
+        // var stu = {
+        //     name : "fldfhdl",
+        //     age : 18,
+        //     sss : function() {
+        //         console.log(this.name + "nidaye");
+                
+        //     }
+        // }
+        // console.log(stu.name);
+        // stu.sss();
+        
+
+
+    // 3.使用函数创建对象
+        // function createStudent(name,age,height,weight) {
+        //     var student = new Object();
+        //     student.name = name;
+        //     student.age = age;
+        //     student.height = height;
+        //     student.weight = weight;
+
+        //     return student;
+        // }
+        // var student1 = createStudent("小品",18,180,140)
+        // console.log(student1);
+
+
+        function Dog(name, hair, bark) {
+            this.name = name;
+            this.hair = hair;
+            this.bark = function(n) {
+                console.log(n + ",dflf");                
+            }           
+        }
+        var dog1 = new Dog("花花", "black");
+        console.log(dog1);
+        dog1.bark("pipixia");
+        
+        
+
+    
+    // 4.使用自定义函数闯将对象
+        // function createStudent(name,age,height,weight) {
+        //     var student = new Object();
+        //     console.log(this);
+            
+        //     student.name = name;
+        //     student.age = age;
+        //     student.height = height;
+        //     student.weight = weight;
+
+        //     return student;
+        // }
+        // var student1 = createStudent("小品",18,180,140)
+        // console.log(student1);
+    
+
+    
+        
+    </script>
+</body>
+</html>
